@@ -2,7 +2,7 @@ function navbar() {
   return `
   <div id="links">
     <div id="logo">
-      <a href="../index.ejs"><img src="https://techstory.in/wp-content/uploads/2018/03/Pepperfry.png" /></a>
+      <a href="/"><img src="https://techstory.in/wp-content/uploads/2018/03/Pepperfry.png" /></a>
     </div>
     <div id="searchbar">
       <i class="material-icons-outlined">search</i>
@@ -289,7 +289,7 @@ function navbar() {
                   </div>
                   <button id="register">REGISTER</button>
                 </form>
-                
+
                 <span class="login_span">By registering you agree to our <a class="termconditions" href="#">Terms &
                     Conditions</a></span>
               </div>
@@ -339,7 +339,7 @@ function navbar() {
                           </div>
                           <button id="login">LOG IN</button>
                       </form>
-                      
+
                       <a href="#" style="color: #f16521 ;font-size: 12px; font-weight: 300;font-family: 'Fira Sans',sans-serif;">Forgot Password</a></span>
                   </div>
               </div>

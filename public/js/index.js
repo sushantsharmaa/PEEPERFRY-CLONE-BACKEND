@@ -163,7 +163,7 @@ function signup() {
         // alert('You are Successfully Registered');
         // window.location.href = "index.html";
     }
-    
+
 }
 
 let register = document.getElementById("register");
@@ -182,7 +182,7 @@ register.addEventListener("click",signup);
 //         if (EMAIL === email && PASSWORD === password) {
 //             window.location.href = "index.html";
 //             return alert("LogIn Successful");
-//         }      
+//         }
 //     }
 //     return alert("Invalid Credential");
 // }
@@ -195,23 +195,23 @@ register.addEventListener("click",signup);
 
 function slideShow() {
 
-    const slider = ["https://ii2.pepperfry.com/media/wysiwyg/banners/promo_2x_221021_es.jpg",
-        "https://ii2.pepperfry.com/media/wysiwyg/banners/HB01_Web_28102021_2x.jpg",
-        "https://ii2.pepperfry.com/media/wysiwyg/banners/HB02_Web_28102021_2x.jpg",
-        "https://ii2.pepperfry.com/media/wysiwyg/banners/HB03_Web_28102021_2x.jpg",
-        "https://ii2.pepperfry.com/media/wysiwyg/banners/HB04_Web_28102021_2x.jpg"];
+    const slider = ["https://ii2.pepperfry.com/media/wysiwyg/banners/promo_2X_09122021_es.jpg",
+        "https://ii2.pepperfry.com/media/wysiwyg/banners/HB01_Web_06122021_2x.jpg",
+        "https://ii2.pepperfry.com/media/wysiwyg/banners/HB02_Web_06122021_2x.jpg",
+        "https://ii2.pepperfry.com/media/wysiwyg/banners/HB03_Web_06122021_2x.jpg",
+        "https://ii2.pepperfry.com/media/wysiwyg/banners/HB04_Web_06122021_2x.jpg"];
 
     if (localStorage.getItem('pf_slider') == null) localStorage.setItem('pf_slider', JSON.stringify(slider));
 
     var slider_1 = document.getElementById('slider');
-    var image = document.createElement('img');
+    var imagee = document.createElement('img');
 
     var i = 0;
 
     setInterval(function () {
         i = i % JSON.parse(localStorage.getItem('pf_slider')).length;
-        image.src = JSON.parse(localStorage.getItem('pf_slider'))[i];
-        slider_1.append(image);
+        imagee.src = JSON.parse(localStorage.getItem('pf_slider'))[i];
+        slider_1.append(imagee);
         i++;
     }, 3000);
 

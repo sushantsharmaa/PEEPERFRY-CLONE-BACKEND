@@ -90,7 +90,7 @@ function footer(){
                         <div id="cards-wrap">
                             <div><img src="https://i2.wp.com/www.born-2-fly.de/wp-content/uploads/2020/10/visa-logo.png?ssl=1 " alt="img"></div>
                             <div><img src="https://w7.pngwing.com/pngs/92/785/png-transparent-mastercard-logo-mastercard-credit-card-payment-visa-nyse-ma-mastercard-logo-text-logo-sign.png" alt=""></div>
-                            <div><img src="https://cdn.icon-icons.com/icons2/2341/PNG/512/maestro_payment_method_card_icon_142736.png" alt=""></div>
+                            <div><img src="https://etimg.etb2bimg.com/photo/79760940.cms" alt=""></div>
                             <div><img src="https://www.goodreturns.in/img/2020/07/amexcreditcard1-1595418788.jpg" alt=""></div>
                             <div><img src="https://trak.in/wp-content/uploads/2020/01/Rupay-Cards-Big-1.jpg" alt=""></div>
                             <div><img src="https://play-lh.googleusercontent.com/0r42y01w-X5DaJlAv2DgJWQXdYBmjw4o14lZ0Y0v5K7O01nelVbUWLFmA5xqGihf-Ps" alt=""></div>
