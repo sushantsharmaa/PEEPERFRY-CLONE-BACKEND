@@ -1,4 +1,4 @@
-const app = require("./index.js");
+const app = require("./app.js");
 
 const connect = require("./configs/db");
 

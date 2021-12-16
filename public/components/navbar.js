@@ -258,7 +258,7 @@ function navbar() {
           <div class="right">
             <div class="rightUp">
               <div class="rightInner">
-                <form id="myform">
+                <form id="myform" method="post" action="/signup">
                   <div class="container">
                     <div class="name">
                       <label for="uname"></label>
@@ -287,8 +287,9 @@ function navbar() {
                       <p id="alert3"></p>
                     </div>
                   </div>
+                  <button id="register">REGISTER</button>
                 </form>
-                <button id="register">REGISTER</button>
+                
                 <span class="login_span">By registering you agree to our <a class="termconditions" href="#">Terms &
                     Conditions</a></span>
               </div>
@@ -323,7 +324,7 @@ function navbar() {
           <div class="right_one">
               <div class="right_one_Up">
                   <div class="right_one_Inner">
-                      <form id="myform1">
+                      <form id="myform1" method="post" action="/login">
                           <div class="block">
                               <div class="names">
                                   <label for="mail"></label>
@@ -336,8 +337,9 @@ function navbar() {
                                   <input type="password" class="input" id="psw1" placeholder="Password" name="psw" required>
                               </div>
                           </div>
+                          <button id="login">LOG IN</button>
                       </form>
-                      <button id="login">LOG IN</button>
+                      
                       <a href="#" style="color: #f16521 ;font-size: 12px; font-weight: 300;font-family: 'Fira Sans',sans-serif;">Forgot Password</a></span>
                   </div>
               </div>

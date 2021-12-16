@@ -160,8 +160,8 @@ function signup() {
         }
         arr.push(info);
         localStorage.setItem('signup', JSON.stringify(arr));
-        alert('You are Successfully Registered');
-        window.location.href = "index.html";
+        // alert('You are Successfully Registered');
+        // window.location.href = "index.html";
     }
     
 }
@@ -171,24 +171,24 @@ register.addEventListener("click",signup);
 
 // Log In Function -------------------------------------------
 
-function login() {
-    const data = JSON.parse(localStorage.getItem('signup'));
-    let email = document.getElementById("mail1").value;
-    let password = document.getElementById("psw1").value;
+// function login() {
+//     const data = JSON.parse(localStorage.getItem('signup'));
+//     let email = document.getElementById("mail1").value;
+//     let password = document.getElementById("psw1").value;
 
-    for (var i = 0; i < data.length; i++) {
-        let EMAIL = data[i].email;
-        let PASSWORD = data[i].password;
-        if (EMAIL === email && PASSWORD === password) {
-            window.location.href = "index.html";
-            return alert("LogIn Successful");
-        }      
-    }
-    return alert("Invalid Credential");
-}
+//     for (var i = 0; i < data.length; i++) {
+//         let EMAIL = data[i].email;
+//         let PASSWORD = data[i].password;
+//         if (EMAIL === email && PASSWORD === password) {
+//             window.location.href = "index.html";
+//             return alert("LogIn Successful");
+//         }      
+//     }
+//     return alert("Invalid Credential");
+// }
 
-let logIn = document.getElementById("login");
-logIn.addEventListener("click",login);
+// let logIn = document.getElementById("login");
+// logIn.addEventListener("click",login);
 
 
 // Slider ------------------------------------------------------
