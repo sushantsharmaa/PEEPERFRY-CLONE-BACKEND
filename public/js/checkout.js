@@ -1,28 +1,35 @@
 
 
     var name1 = document.getElementById("name");
-    var moblie1 = document.getElementById("moblie");
+    var mobile1 = document.getElementById("moblie");
+
     var name2 = document.getElementById("name1");
-    var moblie2 = document.getElementById("moblie1");
+    var mobile2 = document.getElementById("moblie1");
+
     var pincode1 = document.getElementById("pincode");
     var city1 = document.getElementById("city");
     var address1 = document.getElementById("address");
     var state1 = document.getElementById("state");
+
     var pincode2 = document.getElementById("pincode1");
     var city2 = document.getElementById("city1");
     var address2 = document.getElementById("address1");
     var state2 = document.getElementById("state1");
+
     var country1 = "India";
-    var country2 = document.getElementById("country1");
+    
+
     var pin_valid = document.getElementById("pin_valid");
     var city_valid = document.getElementById("city_valid");
     var state_valid = document.getElementById("state_valid");
     var address_valid = document.getElementById("address_valid");
+
     var pin_valid1 = document.getElementById("pin_valid1");
     var city_valid1 = document.getElementById("city_valid1");
     var state_valid1 = document.getElementById("state_valid1");
     var address_vaild1 = document.getElementById("address_vaild1");
     var country_valid1 = document.getElementById("country_valid1")
+
     var checkbox = document.getElementsByClassName("checkbox");
     var submit = document.getElementById("submit");
 
@@ -75,14 +82,21 @@ function hide_and_seek(){
     var num = "0123456789";
     var capital1 = document.getElementById("capital");
 
-    var arr = JSON.parse(localStorage.getItem('signup'));
-    console.log("arr : ",(arr[arr.length-1].name));
-    capital1.textContent = arr[arr.length-1].name;
-    name1.textContent = arr[arr.length-1].name;
-    moblie1.textContent = arr[arr.length-1].mobile;
-    name2.textContent = arr[arr.length-1].name;
-    moblie2.textContent = arr[arr.length-1].mobile;
+    var arr = JSON.parse(localStorage.getItem('logined_user'));
+    console.log("arr : ",arr);
+    capital1.textContent = arr[0];
 
+    name1.textContent = arr[0];
+    // bala edits
+        var nameda1 = arr[0];    
+    mobile1.textContent = arr[1];
+        var mobileda1 = arr[1];
+
+    name2.textContent = arr[0];
+        
+    mobile2.textContent = arr[1];
+        
+    //**** */
 
     function Show() {
         show1.innerText = "We'll keep in touch via updates to your order, and to plan the item's delivery with you";
@@ -140,7 +154,7 @@ function hide_and_seek(){
             //card.innerHTML = `<div id="cart_d"> </div>`
             card.setAttribute("id", "card_d");
             card.addEventListener("click", function() {
-                window.location.href = "payment.html"
+                window.location.href = "/payment"
             })
             let right_div = document.createElement("div");
             right_div.setAttribute("id", "right_d");
@@ -187,18 +201,29 @@ count.textContent = c;
 
 
     function verify() {
-        console.log("State : ",state1.value);
-        console.log("City : ",city1.value);
-        console.log("State1 : ",state2.value);
-        console.log("City1 : ", city2.value)
+        let flag = 1;
+        
+        console.log('name1.value:', nameda1)
+        console.log('mobile1.value:', mobileda1)
+        console.log("State1 : ",state1.value);
+        console.log("City1 : ",city1.value);
+        
+        console.log("******************")
+
+        console.log('name2.value:', nameda1)
+        console.log('mobile2.value:', mobileda1)
+        console.log("State2 : ",state2.value);
+        console.log("City2 : ", city2.value)
 
         if (pincode1.value.length > 6 || pincode1.value.length < 6) {
+            flag = 0;
             pin_valid.innerText = "Enter valid 6 Digit pincode";
             pin_valid.style.color = "#d0021b";
             pincode1.style.border = "1px solid #d0021b";
         }
 
         if (city1.value.length == 0) {
+            flag = 0;
             city_valid.innerText = "Enter valid city name";
             city_valid.style.color = "#d0021b";
             city1.style.border = "1px solid #d0021b";
@@ -208,6 +233,7 @@ count.textContent = c;
 
                 for (var j = 0; j < num.length; j++) {
                     if (city1[i] === num[j]) {
+                        flag = 0;
                         city_valid.innerText = "Enter valid city name";
                         city_valid.style.color = "#d0021b";
                         city1.style.border = "1px solid #d0021b";
@@ -219,6 +245,7 @@ count.textContent = c;
 
 
         if (state1.value === "Select State") {
+            flag = 0;
             state_valid.innerText = "Select valid state";
             state_valid.style.color = "#d0021b";
             state1.style.border = "1px solid #d0021b";
@@ -226,6 +253,7 @@ count.textContent = c;
 
 
         if(address1.value.length === 0) {
+            flag = 0;
             address_valid.innerText = "Please Enter a Valid Address. Special characters allowed are ( - , . / ) ' +"
             address_valid.style.color = "#d0021b"
             address1.style.border = "1px solid #d0021b";
@@ -233,12 +261,14 @@ count.textContent = c;
 
 
         if (pincode2.value.length > 6 || pincode2.value.length < 6) {
+            flag = 0;
             pin_valid1.innerText = "Enter valid 6 Digit pincode";
             pin_valid1.style.color = "#d0021b";
             pincode2.style.border = "1px solid #d0021b";
         }
 
         if (city2.value.length == 0) {
+            flag = 0;
             city_valid1.innerText = "Enter valid city name";
             city_valid1.style.color = "#d0021b";
             city2.style.border = "1px solid #d0021b";
@@ -248,6 +278,7 @@ count.textContent = c;
 
                 for (var j = 0; j < num.length; j++) {
                     if (city2[i] === num[j]) {
+                        flag = 0;
                         city_valid1.innerText = "Enter valid city name";
                         city_valid1.style.color = "#d0021b";
                         city2.style.border = "1px solid #d0021b";
@@ -257,6 +288,7 @@ count.textContent = c;
         }
 
         if (state2.value.length == 0) {
+            flag = 0;
             state_valid1.innerText = "Enter valid state name";
             state_valid1.style.color = "#d0021b";
             state2.style.border = "1px solid #d0021b";
@@ -266,6 +298,7 @@ count.textContent = c;
 
                 for (var j = 0; j < num.length; j++) {
                     if (city2[i] === num[j]) {
+                        flag = 0;
                         city_valid1.innerText = "Enter valid city name";
                         city_valid1.style.color = "#d0021b";
                         city2.style.border = "1px solid #d0021b";
@@ -275,18 +308,17 @@ count.textContent = c;
         }
 
         if(address2.value.length === 0) {
+            flag = 0;
             address_vaild1.innerText = "Please Enter a Valid Address. Special characters allowed are ( - , . / ) ' +"
             address_vaild1.style.color = "#d0021b"
             address2.style.border = "1px solid #d0021b";
         }
 
-        if (country2.value === "Country") {
-            country_valid1.innerText = "Select valid country";
-            country_valid1.style.color = "#d0021b";
-            country2.style.border = "1px solid #d0021b";
+        if(flag){
+            window.location.href = "/payment";
+        }else{
+            alert("please check the address corectly")
         }
-
-
 
 
     }
@@ -298,13 +330,13 @@ function checkbox1() {
 var same_address = document.getElementById("same_address");
     if(same_address.checked) {
         remove_address.style.display = "none";
-        name2.value = name1.value;
-        moblie2.value = moblie1.value;
+        // name2.value = nameda1;
+        // mobile2.value = mobileda1;
         pincode2.value = pincode1.value;
         address2.value = address1.value;
         city2.value = city1.value;
         state2.value = state1.value;
-        // country2.value = country1;
+        
     }
     else {
         remove_address.style.display = "block";
@@ -316,17 +348,11 @@ var same_address = document.getElementById("same_address");
 submit.addEventListener("click", display)
 function display() {
 
-    console.log("name : ",name1.value);
-    console.log("moblie : ",moblie1.value);
-    console.log("pincode : ",pincode1.value);
-    console.log("address : ",address1.value);
-    console.log("city : ",city1.value);
-    console.log("state : ",state1.value);
-    console.log("country : ",country1);
+    
 
-    let product = {name:name1.value,mobile:moblie1.value,pincode:pincode1.value,address:address1.value,city:city1.value,state:state1.value,country:country1};
+    let product = {name:nameda1,mobile:mobileda1,pincode:pincode1.value,address:address1.value,city:city1.value,state:state1.value,country:country1};
 
-    let product2 = {name:name2.value,mobile:moblie2.value,pincode:pincode2.value,address:address2.value,city:city2.value,state:state2.value,country:country2.value}
+    let product2 = {name:nameda1,mobile:mobileda1,pincode:pincode2.value,address:address2.value,city:city2.value,state:state2.value}
 
 
     console.log(product);
@@ -335,6 +361,8 @@ function display() {
     checkoutInfo1(product2);
 
  }
+
+//  storing the address in  local storage 
  if (localStorage.getItem("checkout") === null) {
      localStorage.setItem("checkout", JSON.stringify([]));
  }
@@ -371,6 +399,7 @@ function checkoutInfo1(p) {
 
 }
 
+// **************************
 let cart = JSON.parse(localStorage.getItem("Checkout_Data"));
 var cart_value = document.getElementById("cart_val");
 var retail_value = document.getElementById("retail_val");

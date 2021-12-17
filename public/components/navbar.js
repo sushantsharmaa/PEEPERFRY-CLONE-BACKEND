@@ -20,7 +20,7 @@ function navbar() {
         </span>
       </div>
       <div class="links">
-      <a href="../html/cart.html"><span class="material-icons-outlined"> shopping_cart </span></a>
+      <a href="/cart"><span class="material-icons-outlined"> shopping_cart </span></a>
         <span>Cart</span>
       </div>
       <div class="links" id="profile">

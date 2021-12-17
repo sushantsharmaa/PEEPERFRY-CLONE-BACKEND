@@ -37,7 +37,11 @@ router.post("/signup", async (req, res) => {
         const token = newToken(user);
 
         const message = "successfully created";
-        return res.render("index", {message});
+
+        logined_user_name = req.body.uname;
+        logined_user_mobile = req.body.num;
+        console.log(logined_user_name, logined_user_mobile)
+        return res.render("index", {message, logined_user_name, logined_user_mobile});
         // return res.status(200).send(user)
     } catch (e) {        
         return res.status(500).json({message: e.message, status:"Failed"})
@@ -66,7 +70,10 @@ router.post("/login", async (req, res) => {
         const token = newToken(user);
 
         const message = "login successfully";
-        return res.render("index", {message});
+        
+        logined_user_name = user.name;
+        logined_user_mobile = user.mobile;
+        return res.render("index", {message, logined_user_name, logined_user_mobile});
         
     }catch(e){
         return res.status(500).json({message: e.message, status:"Failed"})

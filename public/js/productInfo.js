@@ -1,20 +1,20 @@
 let ProductInfo = JSON.parse(localStorage.getItem("ProductInfo"))
 let clicked = ProductInfo[ProductInfo.length - 1]
 
-let Nam = document.getElementById("NAME")
-Nam.textContent = clicked.name
+// let Nam = document.getElementById("NAME")
+// Nam.textContent = clicked.name
 
-let Img = document.getElementById("sofaimg");
-Img.src = clicked.img
+// let Img = document.getElementById("sofaimg");
+// Img.src = clicked.img
 
-let Price = document.getElementById("mrp")
-Price.textContent = +clicked.price
+// let Price = document.getElementById("mrp")
+// Price.textContent = +clicked.price
 
-let brand = document.getElementById("BRAND")
-brand.textContent = clicked.brand
+// let brand = document.getElementById("BRAND")
+// brand.textContent = clicked.brand
 
-let cutPrice = document.getElementById("cutprice")
-cutPrice.textContent = +clicked.cutPrice
+// let cutPrice = document.getElementById("cutprice")
+// cutPrice.textContent = +clicked.cutPrice
 
 
 localStorage.setItem("ProductInfo", JSON.stringify(ProductInfo))

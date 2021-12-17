@@ -19,10 +19,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <% if (typeof(message) !== "undefined") { %>
+  <% if ( (typeof(logined_user_name) !== "undefined") && ( typeof(message) !== "undefined" ) ) { %>
+    <script>
+      alert("<%= message %>");
+      
+      if (localStorage.getItem("logined_user") === null) {
+          localStorage.setItem("logined_user", JSON.stringify([]));
+      }
+        let tem = [];
+        tem.push("<%= logined_user_name %>");
+        tem.push("<%= logined_user_mobile %>");
+          localStorage.setItem("logined_user", JSON.stringify(tem));
+      
+    </script>
+  <% }else if ( typeof(message) !== "undefined" ){ %>
+
     <script>
       alert("<%= message %>");
     </script>
+
   <% } %>
 
 

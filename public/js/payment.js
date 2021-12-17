@@ -1,11 +1,16 @@
 get_username();
 
+var to_pay = 0;
+
 function get_username(){
-    let uname = JSON.parse(localStorage.getItem("signup"))
-        console.log('uname:', uname[0].name)
+    let uname = JSON.parse(localStorage.getItem("logined_user"))
+        console.log('uname:', uname[0])
 
     let tem = document.getElementById("user-name")
-    tem.innerText = "WELCOME " + uname[0].name.toUpperCase();
+    let to_bold = `WELCOME <strong>${uname[0].toUpperCase()}!</strong>`
+    console.log('tobold:', to_bold)
+
+        tem.innerHTML = to_bold;
 }
 
 cart_details();
@@ -30,8 +35,8 @@ function cart_details(){
 //     state : "Tamil Nadu",
 
 // }
-let uname = JSON.parse(localStorage.getItem("signup"))
-        console.log('uname:', uname[0].name)
+let uname = JSON.parse(localStorage.getItem("logined_user"))
+        console.log('uname:', uname[0])
 
 let ship_address = JSON.parse(localStorage.getItem("checkout"))
         console.log('ship_address:', ship_address)
@@ -49,7 +54,7 @@ function user_details(checkout,target_id){
     let target = document.getElementById(target_id)
 
     let name = document.createElement("p")
-        name.innerText = uname[0].name;
+        name.innerText = uname[0];
 
     let address = document.createElement("p")
         address.innerText = checkout.address;
@@ -61,12 +66,12 @@ function user_details(checkout,target_id){
         state.innerText = checkout.state;
 
     let mobile = document.createElement("p")
-        mobile.innerText = "M : " + uname[0].mobile;
+        mobile.innerText = "M : " + uname[1];
 
     target.append(name,address,pincode,state,mobile)
 }
 // ************************************************
-alert("Half");
+
 var whole_total = 0;
 
 // var Checkout_Data = {
@@ -90,7 +95,9 @@ function get_total() {
     whole_total += +(Checkout_Data.Total)
 
     let sum = document.getElementById("whole-total")
-        sum.innerText = whole_total
+        sum.innerText = whole_total;
+
+    to_pay = whole_total;
 }
 
 // ******************** error message ****
@@ -107,7 +114,7 @@ function testError(id1,id2,id3,id4){
     }
 
     if(item1 || item2 || item3 || item4){
-        window.location.href = "../html/card_details.html";
+        window.location.href = "/card_details";
     }else{
         let tarID = document.getElementById("error-box");
 
@@ -133,6 +140,7 @@ function checkbox(){
 
         let sum = document.getElementById("whole-total")
         sum.innerText = whole_total
+        to_pay = whole_total;
 
     }else{
         give_india.style.display = "none"
@@ -140,7 +148,7 @@ function checkbox(){
 
         let sum = document.getElementById("whole-total")
         sum.innerText = whole_total
-
+        to_pay = whole_total;
     }
 }
 
@@ -259,7 +267,7 @@ function change(id){
 
 
         </div>
-        <button onclick="testError('item01','item02','item03','item04')" class="proceed-topay-btn">PROCEED TO PAY <span id="amnt">$######</span></button>
+        <button onclick="testError('item01','item02','item03','item04')" class="proceed-topay-btn">PROCEED TO PAY <span id="amnt">₹${to_pay}</span></button>
         <p>Note: You Will Be Asked To Enter Your Card Details On Proceeding With The Selected Payment Options.</p>
 
         </div>`
@@ -271,7 +279,7 @@ function change(id){
 
         target.innerHTML = `<div class="atm-card">
         <p class="p">CASH ON DELIVERY</p>
-        <a href="order placed.html"><button class="proceed-topay-btn">PROCEED TO PAY <span id="amnt">$######</span></button></a>
+        <a href="order placed.html"><button class="proceed-topay-btn">PROCEED TO PAY <span id="amnt">₹${to_pay}</span></button></a>
         <p>Note: 38,564 People used online payment options in the last hour. Pay online now for safe and contactless delivery.</p>
         </div>`
 
@@ -300,7 +308,7 @@ function change(id){
 
 
         </div>
-        <button onclick="testError('item11','item12','item13','item14')" class="proceed-topay-btn">PROCEED TO PAY <span id="amnt">$######</span></button>
+        <button onclick="testError('item11','item12','item13','item14')" class="proceed-topay-btn">PROCEED TO PAY <span id="amnt">₹${to_pay}</span></button>
         <p>Note: You Will Be Asked To Enter Your Credid Card Details On Proceeding With The Selected Payment Options.</p>
 
         </div>`
@@ -330,7 +338,7 @@ function change(id){
             <div class="select-bank"><select class="bank">
                 <option value="">Select Bank</option>
             </select></div>
-            <button onclick="testError('item21','item22','item23','item24')" class="proceed-topay-btn">PROCEED TO PAY <span id="amnt">₹######</span></button>
+            <button onclick="testError('item21','item22','item23','item24')" class="proceed-topay-btn">PROCEED TO PAY <span id="amnt">₹${to_pay}</span></button>
         <p>Note: On clicking “Proceed To Pay”, you will be directed to a secure Payment Gateway. After completing the payment process there you will be redirected back to Pepperfry.com to view your order details.
         </p>
 

@@ -173,18 +173,18 @@ register.addEventListener("click",signup);
 
 // function login() {
 //     const data = JSON.parse(localStorage.getItem('signup'));
-//     let email = document.getElementById("mail1").value;
-//     let password = document.getElementById("psw1").value;
+    // let email = document.getElementById("mail1").value;
+    // let password = document.getElementById("psw1").value;
 
-//     for (var i = 0; i < data.length; i++) {
-//         let EMAIL = data[i].email;
-//         let PASSWORD = data[i].password;
-//         if (EMAIL === email && PASSWORD === password) {
-//             window.location.href = "index.html";
-//             return alert("LogIn Successful");
-//         }
-//     }
-//     return alert("Invalid Credential");
+    // for (var i = 0; i < data.length; i++) {
+    //     let EMAIL = data[i].email;
+    //     let PASSWORD = data[i].password;
+    //     if (EMAIL === email && PASSWORD === password) {
+    //         window.location.href = "index.html";
+    //         return alert("LogIn Successful");
+    //     }
+    // }
+    // return alert("Invalid Credential");
 // }
 
 // let logIn = document.getElementById("login");

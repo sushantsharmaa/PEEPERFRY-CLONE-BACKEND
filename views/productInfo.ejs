@@ -243,5 +243,25 @@
   <script type="module" src="js/product2.js"></script>
 </body>
 
+<script>
+  // alert("<%= name %>, <%= price %>");
+  let Nam = document.getElementById("NAME")
+  Nam.textContent = "<%= name %>"
+
+  let Img = document.getElementById("sofaimg");
+  Img.src = "<%= img %>"
+
+  let Price = document.getElementById("mrp")
+  Price.textContent = "<%= price %>"
+
+  let brand = document.getElementById("BRAND")
+  brand.textContent = "<%= brand %>"
+
+  let cutPrice = document.getElementById("cutprice")
+  cutPrice.textContent = "<%= cutPrice %>"
+
+
+</script>
+
 </html>
 <script src="js/productInfo.js"></script>

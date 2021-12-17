@@ -155,14 +155,16 @@ if (localStorage.getItem("ProductInfo") === null) {
 }
 
 function NewPage(news) {
+    console.log('news:', news)
     let mynews = JSON.parse(localStorage.getItem("ProductInfo"))
 
     mynews.push(news)
 
     localStorage.setItem("ProductInfo", JSON.stringify(mynews))
 
-
-    window.location.href = "/productInfo"
+    
+    // window.location.href = "/productInfo"
+    window.location.href=`/productInfo?name=${news.name}&brand=${news.brand}&price=${news.price}&img=${news.img}&cutPrice=${news.cutPrice}`
 
 
 }

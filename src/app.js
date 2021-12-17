@@ -39,7 +39,13 @@ app.use("/", userController);
 app.use("/", productController);
 
 app.get("/productInfo", (req,res) => {
-  return res.render("productInfo.ejs");
+  return res.render("productInfo.ejs", {
+    name: req.query.name,
+    price: req.query.price,
+    img: req.query.img,
+    brand: req.query.brand,
+    cutPrice: req.query.cutPrice
+  });
 });
 
 app.get("/cart", (req,res) => {
@@ -54,6 +60,13 @@ app.get("/payment", (req,res) => {
   return res.render("payment.ejs");
 });
 
+app.get("/card_details", (req,res) => {
+  return res.render("card_details.ejs");
+});
+
+app.get("/thankyou", (req,res) => {
+  return res.render("thankyou.ejs");
+});
 // ************************************
 
 

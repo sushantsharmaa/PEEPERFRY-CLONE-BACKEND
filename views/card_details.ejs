@@ -44,15 +44,19 @@
         </div>
       </div>
       <div class="mid-hr"></div>
+    <!-- <form action=""> -->
       <div class="right-side">
         <p>NEW CARD</p>
+    
         <div class="form">
           <label for="">New Card</label><br /><br />
+        
           <input
             id="input-card-num"
             type="text"
             placeholder="Enter Card Number"
             onfocusout="function_alert('card-num', 'input-card-num')"
+            required
           /><br />
           <span id="card-num">Please Enter card Number</span><br />
           <div class="mid-two">
@@ -63,6 +67,7 @@
                 type="text"
                 placeholder="MM/YY"
                 onfocusout="function_alert('date', 'input-date')"
+                required
               /><br />
               <span id="date">Please Enter expeiry date</span><br />
             </div>
@@ -85,7 +90,9 @@
           </div>
           <button onclick="go_to()">PROCEED</button>
         </div>
+    
       </div>
+    <!-- </form> -->
     </div>
 
     <div id="footer">

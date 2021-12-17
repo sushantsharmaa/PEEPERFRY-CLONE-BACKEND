@@ -1,14 +1,16 @@
 get_username();
 
 function get_username(){
-    let uname = JSON.parse(localStorage.getItem("signup"))
-        console.log('uname:', uname.name)
+    let uname = JSON.parse(localStorage.getItem("logined_user"))
+        console.log('uname:', uname[0])
 
     let tem = document.getElementById("user-name")
 
-    uname.forEach((item) => {
-        tem.innerText = "WELCOME " + item.name.toUpperCase();
-    })
+    let to_bold = `WELCOME <strong>${uname[0].toUpperCase()}!</strong>`
+    console.log('tobold:', to_bold)
+
+        tem.innerHTML = to_bold;
+    // })
 
 }
 
