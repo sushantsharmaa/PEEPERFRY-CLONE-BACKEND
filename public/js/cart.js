@@ -25,7 +25,7 @@ var assembly = 449;
 
 let div1 = document.getElementById("dis");
 
-data.forEach(function(el, i) {
+data.forEach(function (el, i) {
 
   var count = 1;
   el.qty = 1;
@@ -67,7 +67,7 @@ data.forEach(function(el, i) {
   div1C1.style.cursor = "pointer";
 
 
-  div1C1.addEventListener("click", function(i) {
+  div1C1.addEventListener("click", function (i) {
     count--;
     el.qty--;
     if (count === 0 && el.qty === 0) {
@@ -99,7 +99,7 @@ data.forEach(function(el, i) {
   div1C3.style.cursor = "pointer";
 
 
-  div1C3.addEventListener("click", function() {
+  div1C3.addEventListener("click", function () {
     count++;
     el.qty++;
     div1C2.innerText = count;
@@ -154,7 +154,7 @@ data.forEach(function(el, i) {
   let img1 = document.createElement("img");
   img1.classList = "del";
   img1.src = "https://cdn-icons-png.flaticon.com/128/1632/1632602.png";
-  img1.addEventListener("click", function() {
+  img1.addEventListener("click", function () {
     el.qty = 0;
     delItemsFromCart(i);
     value -= count * el.price;
@@ -178,7 +178,7 @@ data.forEach(function(el, i) {
   let img2 = document.createElement("img");
   img2.classList = "del";
   img2.src = "https://icon-library.com/images/wish-list-icon/wish-list-icon-1.jpg";
-  img2.addEventListener("click", function() {
+  img2.addEventListener("click", function () {
     if (img2.src == "https://icon-library.com/images/wish-list-icon/wish-list-icon-1.jpg") {
       img2.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png"
     } else {
