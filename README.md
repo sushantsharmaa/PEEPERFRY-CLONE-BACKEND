@@ -22,7 +22,7 @@ https://pepperfry-clone-silk.vercel.app/
 # Installation 
 * Clone the repository
     ``` 
-    git clone https://github.com/RahulGoyal03/PEPPERFRY-CLONE-BACKEND.git
+    git clone https://github.com/sushantsharmaa/PEPPERFRY-CLONE-BACKEND.git
     ```
 # Contributors
 The main Contributors for this project are
