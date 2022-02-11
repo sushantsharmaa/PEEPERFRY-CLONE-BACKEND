@@ -1,36 +1,61 @@
-# PEPPERFRY-CLONE-BACKEND
-Unit-4 Backend Project. 
+# Pepperfry-Backend
+This repo is the clone of www.pepperfry.com , which is an e-commerce website of a furniture , headquartered in Mumbai . This is our team collaboration project at Full Stack-development bootcamp in Masai School. Feel free to contact us for any queries or feedback.
+This is our second project at masai school construct week after learning HTML,CSS,JAVASCRIPT,MongoDB,Mongoose,ExpressJs & NodeJs.
+
+# Deploy Link
+https://pepperfry-clone-silk.vercel.app/
 
 
-As a member from the FT-Web12, we are almost on the verge of completion of the fourth unit and it was during the final week which is depicted as the construct week in Masai Bootcamp where the students as a group of 4 build the clone of any major website and the one allotted for my team was “pepperfry.com”.
+# Tech Stack
+* HTML
+* CSS
+* JAVASCRIPT
+* MongoDB
+* Mongoose
+* ExpressJS
+* NodeJS
 
-The fourth unit had the following topics in curriculum:
+# Prerequisites 
+* VS Code
 
-Express
-Mongoose
-MongoDB
-NodeJS
-MVC Structure
-Pagination
-File Upload
-Validations And Authentication
-EJS
-Deployment The Project
-Redis
-We implemented this above topics to clone this website.
 
-Our Team:-
+# Installation 
+* Clone the repository
+    ``` 
+    git clone https://github.com/RahulGoyal03/PEPPERFRY-CLONE-BACKEND.git
+    ```
+# Contributors
+The main Contributors for this project are
 
-Sushant Sharma
+* Bala Murugan
+* Sushant Sharma
+* Shivam Singh
+* Rahul Goyal
 
-Rahul Goyal
 
-Shivam Singh
+# Features:
+* Social Sign-in/Sign-up.
+* HomePage Layout.
+* Product Page with Sorting & Filtering Functionality.
+* Product Info Page.
+* Add to cart, Checkout. 
+* Payment Page.
 
-Bala Murugan
 
-We accomplished this project because of the immense support and commitment from the above my teammates.
+# Roles & Responsibilities:-
+* Built User Registration & Sign-in Page.
+* Give the Drop-down effect on Homepage.
+* Built the Product Page with proper Sorting & Filtering Functionality.
+* Product Info Page with updated details of it.
 
-Project description:-
 
-We had to clone the pepperfry.com website. We have tried to clone the pixel-perfect website with the help of HTML, CSS, JAVASCRIPT, Express, MongoDB, NodeJS. Samples how it looks like.
+
+# Challenge-:
+We had faced a lot of issues in cloning the website. First of all we were not used to reading the code of other people. There we faced some issues. We also sometimes had to fix some issues related to merging our code through github.
+
+# Learning-:
+* We all became proficient in reading the code of team members.
+* Our code writing style became cleaner as we had to think while writing code that other team member will be reading.
+* We had to learn about many CSS properties that we didn’t know before.
+* Our skills in Java Script and DOM manipulation became better.
+* We all learned how to plan a project and execute that.
